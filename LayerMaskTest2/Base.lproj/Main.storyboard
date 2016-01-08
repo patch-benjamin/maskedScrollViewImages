@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayerMaskTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY2-Q7-9DE" customClass="ScrollViewContainerView" customModule="LayerMaskTest2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4U-jq-DIT">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slc" translatesAutoresizingMaskIntoConstraints="NO" id="wjb-Ps-eEs">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wjb-Ps-eEs" firstAttribute="leading" secondItem="W4U-jq-DIT" secondAttribute="leading" id="69V-oM-jQE"/>
+                                            <constraint firstItem="wjb-Ps-eEs" firstAttribute="centerY" secondItem="W4U-jq-DIT" secondAttribute="centerY" id="86x-eU-OYQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="wjb-Ps-eEs" secondAttribute="trailing" id="AXR-7R-vS9"/>
+                                            <constraint firstAttribute="bottom" secondItem="wjb-Ps-eEs" secondAttribute="bottom" id="goN-3F-PCn"/>
+                                            <constraint firstItem="wjb-Ps-eEs" firstAttribute="centerX" secondItem="W4U-jq-DIT" secondAttribute="centerX" id="n5X-iA-HeB"/>
+                                            <constraint firstItem="wjb-Ps-eEs" firstAttribute="top" secondItem="W4U-jq-DIT" secondAttribute="top" id="rTh-fK-h0Z"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="F7g-Ej-vJt"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="W4U-jq-DIT" firstAttribute="top" secondItem="JY2-Q7-9DE" secondAttribute="top" id="AyM-d5-Q4y"/>
+                                    <constraint firstItem="W4U-jq-DIT" firstAttribute="leading" secondItem="JY2-Q7-9DE" secondAttribute="leading" id="Lap-y7-CwP"/>
+                                    <constraint firstAttribute="bottom" secondItem="W4U-jq-DIT" secondAttribute="bottom" id="ZEA-UG-ngf"/>
+                                    <constraint firstAttribute="trailing" secondItem="W4U-jq-DIT" secondAttribute="trailing" id="fex-72-G74"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JY2-Q7-9DE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cez-zN-b1F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JY2-Q7-9DE" secondAttribute="bottom" id="IMK-nS-Qbb"/>
+                            <constraint firstItem="JY2-Q7-9DE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Iwa-WU-nhU"/>
+                            <constraint firstAttribute="trailing" secondItem="JY2-Q7-9DE" secondAttribute="trailing" id="MU6-uX-5SH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wjb-Ps-eEs" id="5eN-9V-dTH"/>
+                        <outlet property="scrollView" destination="W4U-jq-DIT" id="56C-H8-XpR"/>
+                        <outlet property="scrollViewControllerView" destination="JY2-Q7-9DE" id="k8B-Vr-64b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="slc" width="375" height="667"/>
+    </resources>
+</document>
